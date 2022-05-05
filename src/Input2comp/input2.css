@@ -1,0 +1,20 @@
+.input2_container{
+width: 551px;
+height: 102px;
+border: 1px solid #A6A6A6;
+box-sizing: border-box;
+border-radius: 5px;
+margin-left:87px;
+padding-left: 20px;
+padding-top: 5px;
+font-style: none;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-decoration: none;
+}
+.input2_header{
+color: #3C3C3C;
+margin-left: 87px;
+margin-top: 50px;
+}

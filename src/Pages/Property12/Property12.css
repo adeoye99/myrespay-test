@@ -1,0 +1,19 @@
+.property12_header{
+    font-family: 'MetaPro';
+    justify-content: center;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+margin-left: 27px;
+
+color: #038618;
+}
+.property12_button{
+    width: 222px;
+    height: 42px;
+    margin-left: 700px;
+    background-color: #038618;
+}
+.property12{
+    background: #E5E5E5;
+}

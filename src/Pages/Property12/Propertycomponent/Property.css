@@ -1,0 +1,73 @@
+.property{
+    display: flex;
+    flex-direction:column;
+    width:314px;
+
+    margin-left:26px;
+    float:left;
+    margin-top: 10px;
+    background-color: #E5E5E5;
+}
+.property_titleamountcont{
+    display:flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+.property_title{
+ color: #767272;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+margin-left:17.5px;
+}
+.property_amount{
+    color:#038618;
+    font-family: 'MetaPro';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+margin-left:70px;
+
+}
+.property_type{
+color: #A5A4A4;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+margin-left:17.5px;
+margin-top:2px;
+
+}
+.property_location{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+color: #767272;
+margin-left:17.5px;
+margin-top:2px;
+margin-bottom: 20px;
+}
+.property_about{
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+
+}
+
+.property_image{
+    height:216px;
+}
+.property_arrow{
+    margin-left: 180px;
+    margin-top: 8px;
+    height:8px;
+    width: 14px;
+    
+}
+.property_typeandarrow{
+    display: flex;
+    flex-direction: row;
+}
