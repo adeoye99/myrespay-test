@@ -18,6 +18,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { BiArrowBack } from "react-icons/bi";
+import Propertysection from '../Propertysectionimages/Propertysection';
 
 
 
@@ -76,7 +77,75 @@ const menuData2 = [
   }
   ]
 
+  function MyVerticallyCenteredModal2(props) {
+    return (
+      <Modal
+        {...props}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+         <p className='property12_backicon' closeButton>  <BiArrowBack closeButton/> Back</p>
+        <Modal.Header style ={{border:"none"}} closeButton>
+         
+          <Modal.Title id="contained-modal-title-vcenter">
+              Add Images
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Form>
+            <Form.Group
+            style = {{ marginLeft: "30px" ,marginRight: "30px"}} 
+            className="mb-3" 
+            controlId="exampleForm.ControlInput1">
+              <Form.Label>Upload Property Images</Form.Label>
+              <Form.Control
+                style = {{ width: "400px",justifyContent : "center"}}
+                type="text"
+                placeholder="Drag & drop logo or Browse"
+                autoFocus
+              />
+            </Form.Group>
+            </Form>
+            <Propertysection
+                name = "FrontView.jpg"
+                img = "/Images/Rectangle 537.png"
+
+            />
+            <Propertysection
+                name = "Bathroom.jpg"
+                img = "/Images/Rectangle 537 (1).png"
+
+            />
+            <Propertysection
+                name = "Bedroom.jpeg"
+                img = "/Images/Rectangle 537 (2).png"
+
+            />
+            <Propertysection
+                name = "Garden.png"
+                img = "/Images/Rectangle 537 (3).png"
+
+            />
+            <Propertysection
+                name = "Gynassium.jpg"
+                img = "/Images/Rectangle 537 (4).png"
+
+            />
+            <Propertysection
+                name = "Kitchen.jpg"
+                img = "/Images/Rectangle 537 (5).png"
+
+            />
+        </Modal.Body>
+                
+        <Modal.Footer  style  ={{ border : "none"}}>
+          <Button style = {{ width:"450px", marginLeft: "30px" ,marginRight: "30px",marginTop: "254px",backgroundColor : "#038618"}}onClick={props.onHide}>Save</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
   function MyVerticallyCenteredModal(props) {
+    const [modalShow2 , setModalShow2] = React.useState(false);
     return (
       <Modal
         {...props}
@@ -179,7 +248,13 @@ const menuData2 = [
             
         </Modal.Body>
         <Modal.Footer  style  ={{ border : "none"}}>
-          <Button style = {{ width:"450px", marginLeft: "30px" ,marginRight: "30px",backgroundColor : "#038618"}}onClick={props.onHide}>Save</Button>
+          <Button  variant="primary" onClick={() => setModalShow2(true)}
+          style = {{ width:"450px", marginLeft: "30px" ,marginRight: "30px",backgroundColor : "#038618"}}
+          >Save</Button>
+            <MyVerticallyCenteredModal2
+                     show={modalShow2}
+                      onHide={() => setModalShow2(false)}
+                      />
         </Modal.Footer>
       </Modal>
     );
@@ -188,6 +263,7 @@ const menuData2 = [
   
 export default function PermanentDrawerLeft() {
   const [modalShow, setModalShow] = React.useState(false);
+  
   return (
 
     <Box sx={{ display: 'flex', bgcolor :"#E5E5E5"}}>
@@ -199,7 +275,7 @@ export default function PermanentDrawerLeft() {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            height:"80%",
+            height:"85%",
             background:"#038618"
           },
          
@@ -239,11 +315,9 @@ export default function PermanentDrawerLeft() {
       > 
           <Toolbar/>
           <Typography  paragraph> 
-        
-           
               <div className='property12_section1'>
                 <h1 className='property12_header'>Property</h1>
-                 <button className = "property12_button" variant="primary" onClick={() => setModalShow(true)}><IoAdd size = "20px" color='white' style = {{ marginLeft : "30px"}}/><p className='property12_addbuttoncontent'>Add New Property</p> </button>  
+                 <button className = "property12_button" variant="primary" onClick={() => setModalShow(true)}><IoAdd size = "20px" color='white' style = {{ marginLeft : "20px"}}/><p className='property12_addbuttoncontent'>Add New Property</p> </button>  
                      
         </div>
   
@@ -251,6 +325,7 @@ export default function PermanentDrawerLeft() {
                      show={modalShow}
                       onHide={() => setModalShow(false)}
                       />
+                     
    
            <Property
              Propertytitle = "Top Court Garden"
