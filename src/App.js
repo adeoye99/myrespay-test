@@ -4,12 +4,13 @@ import Addnewproperty from "./Pages/Addnewproperty";
 import Property12 from "./Pages/Property12/Property12";
 import "./index.css"
 import "./App.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div className="App">
       <Property12/>
-      <Property3/>
-      <Addnewproperty/>
+     
     </div>
   );
 }
